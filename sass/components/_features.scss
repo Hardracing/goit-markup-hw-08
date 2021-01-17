@@ -1,0 +1,63 @@
+.title {
+  color: $--title-text-color;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section-features {
+  padding-top: 94px;
+}
+
+.features-title {
+  color: $--title-text-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 10;
+}
+/* calc ((100% - кол-во маржинов в строке * значение маржина) / кол-во єлементов в строке */
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.features-item {
+  width: calc((100% - 3 * 30px) / 4);
+  margin-right: 30px;
+}
+
+.features-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.container-features {
+  display: flex;
+  flex-wrap: wrap;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: $--secondary-bg-color;
+  border-radius: 4px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.features .paragraph {
+  color: $--primary-text-color;
+  font-size: 14px;
+  line-height: 1.71;
+}
