@@ -47,6 +47,13 @@
                         +38 096 111 11 11</a>
                 </li>
             </ul>
+            <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-menu" href="./images/icons/sprite.svg#icon-antenna"></use>
+                    <use class="icon-crosss" href="./images/icons/sprite.svg#icon-close-black"></use>
+                </svg>
+            </button>
+            <div class="menu-container" id="menu-container" data-menu>Контент меню</div>
         </div>
     </header>
         <!--Герой-->
@@ -119,7 +126,7 @@
                     </div>
                 </section>
                 <!--Чем мы занимаемся-->
-                <section class="section">
+                <section class="specialization">
                     <div class="container">
                         <h2 class="work-title">
                             Чем мы занимаемся
@@ -482,6 +489,7 @@
                         </div>
                     </div>
                 </div>
+                    <script src="./JS/menu.js"></script>
                     <script>
                         (() => {
                             document

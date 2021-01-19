@@ -3,6 +3,8 @@
 }
 
 .container-nav {
+  position: relative;
+
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -100,4 +102,43 @@
 
   padding: 0;
   margin-right: 10px;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-crosss {
+  display: none;
+}
+
+.menu-button.is-open .icon-crosss {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+
+  &.is-open {
+    display: block;
+  }
 }
