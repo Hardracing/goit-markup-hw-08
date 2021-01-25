@@ -10,7 +10,12 @@
 }
 
 .section-features {
-  padding-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+  }
 }
 
 .features-title {
@@ -19,36 +24,79 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
 
   margin-top: 0;
-  margin-bottom: 10;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    text-align: start;
+  }
 }
 /* calc ((100% - кол-во маржинов в строке * значение маржина) / кол-во єлементов в строке */
 
 .features {
   display: flex;
   flex-wrap: wrap;
+
+  margin: -15px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin: 0;
+  }
 }
 
 .features-item {
-  width: calc((100% - 3 * 30px) / 4);
-  margin-right: 30px;
-}
+  margin: 15px;
 
-.features-item:nth-child(4n) {
-  margin-right: 0;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 0;
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 3 * 30px) / 4);
+    margin: 0;
+    margin-right: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
 }
 
 .container-features {
+  background-color: $--secondary-bg-color;
+
   display: flex;
-  flex-wrap: wrap;
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
   align-items: center;
   justify-content: center;
-  background-color: $--secondary-bg-color;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+
   border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: wrap;
+    width: 270px;
+    height: 120px;
+  }
 }
 
 p {
