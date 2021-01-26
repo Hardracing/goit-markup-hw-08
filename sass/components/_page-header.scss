@@ -1,10 +1,12 @@
+header {
+  position: relative;
+}
+
 .nav .logo {
   color: $--nav-logo-color;
 }
 
 .container-nav {
-  position: relative;
-
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -15,6 +17,10 @@
 
   @media screen and (min-width: 480px) {
     width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -28,27 +34,29 @@
   padding: 16px 0px;
 
   @media screen and (min-width: 768px) {
-    padding: 26px 0px;
-  }
-
-  @media screen and (min-width: 1200px) {
     padding: 0;
   }
 }
 
 .site-nav {
-  display: none;
-  // @media screen and (min-width: 768px) {
-  //   display: none;
-  // }
-  @media screen and (min-width: 1200px) {
+  padding: 60px 0px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    // display: none;
+  }
+
+  @media screen and (min-width: 768px) {
     display: flex;
-    margin-left: 93px;
+    padding: 0;
   }
 }
 
 .site-nav .item + .item {
-  @media screen and (min-width: 480px) {
+  margin-top: 40px;
+
+  @media screen and (min-width: 768px) {
     margin-left: 50px;
   }
 }
@@ -61,14 +69,17 @@
   letter-spacing: 0.02em;
 
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
     color: $--accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -80,10 +91,9 @@
   position: relative;
 }
 
-.item .current::before {
+.item .current::after {
   content: '';
 
-  position: absolute;
   bottom: 0;
   left: 0;
 
@@ -94,10 +104,14 @@
   height: 4px;
 
   border-radius: 2px;
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+  }
 }
 
 .nav-address {
-  display: none;
+  // display: none;
 
   @media screen and (min-width: 1200px) {
     color: $--primary-text-color;
@@ -113,7 +127,9 @@
 }
 
 .nav-address .item + .item {
-  margin-left: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 50px;
+  }
 }
 
 .nav-address .link:hover,
