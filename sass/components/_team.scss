@@ -1,14 +1,10 @@
 .team {
   justify-content: center;
-  margin-bottom: -30px;
+  margin: -15px;
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  @media screen and (min-width: 1200px) {
-    display: flex;
   }
 }
 
@@ -17,28 +13,15 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin-bottom: 30px;
+  margin: 15px;
+  width: 450px;
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 2 * 30px) / 2);
-    margin-right: 30px;
-
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
+    width: 354px;
   }
 
   @media screen and (min-width: 1200px) {
-    width: calc((100% - 3 * 30px) / 4);
-    margin-right: 30px;
-
-    &:nth-child(2n) {
-      margin-right: 30px;
-    }
-
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
+    width: 270px;
   }
 }
 
@@ -91,7 +74,12 @@
 }
 
 .team-text {
-  padding: 30px 32px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: 1200px) {
+    padding: 30px 32px;
+  }
 }
 
 .section .title {
