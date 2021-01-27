@@ -58,13 +58,6 @@ li {
   margin: 0;
 }
 
-@media screen and (min-width: 768px) {
-  .list {
-    display: flex;
-    align-items: baseline;
-  }
-}
-
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -160,17 +153,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-@media screen and (min-width: 480px) {
-  .container-nav {
-    width: 480px;
-  }
+  max-width: 1200px;
 }
 
 @media screen and (min-width: 768px) {
   .container-nav {
     width: 768px;
+    justify-content: flex-start;
+    align-items: baseline;
   }
 }
 
@@ -200,6 +190,13 @@ header {
 
 @media screen and (min-width: 768px) {
   .site-nav {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
     display: flex;
     padding: 0;
   }
@@ -211,6 +208,7 @@ header {
 
 @media screen and (min-width: 768px) {
   .site-nav .item + .item {
+    margin-top: 0;
     margin-left: 50px;
   }
 }
@@ -261,16 +259,33 @@ header {
   }
 }
 
+.nav-address {
+  color: #757575;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-address {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    font-size: 12px;
+    line-height: 1.16;
+    margin-left: 80px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .nav-address {
-    color: #757575;
-    font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02em;
     display: flex;
-    margin-left: auto;
+    margin-left: 281px;
     align-items: baseline;
+    flex-direction: row;
   }
 }
 
@@ -347,8 +362,15 @@ header {
 
 @media screen and (min-width: 768px) {
   .menu-container {
+    margin-left: 88px;
     display: flex;
     padding: 0;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-container {
     margin-left: 93px;
   }
 }
@@ -421,6 +443,7 @@ header {
 @media screen and (min-width: 1200px) {
   .section-features {
     padding-top: 94px;
+    padding-bottom: 0;
   }
 }
 
